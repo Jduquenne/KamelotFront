@@ -1,0 +1,8 @@
+{
+  "name": "Kamelot - Front",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "690666a5"
+}

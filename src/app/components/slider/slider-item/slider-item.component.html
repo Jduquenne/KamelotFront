@@ -1,0 +1,19 @@
+<div class="slider-item" [routerLink]="['/brocante', data.id]">
+  <div class="image">
+    <div class="date-container">
+      <div class="date">{{data.date.day}}/{{data.date.month}}</div>
+    </div>
+    <img [src]="'assets/img/brocantes/'+ data.img + '.jpg'" alt="brocantes">
+  </div>
+  <div class="infos-container">
+    <div class="infos">
+      <div class="name">{{data.name}}</div>
+      <div class="town">{{data.adress.town}}</div>
+      <div class="group">
+        <div class="seller">{{data.sellers.count}} exposants</div>
+        <span class="separate"></span>
+        <div class="type">{{data.type}}</div>
+      </div>
+    </div>
+  </div>
+</div>

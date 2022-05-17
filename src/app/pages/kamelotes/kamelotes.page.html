@@ -1,0 +1,21 @@
+<ion-header>
+  <app-header [title]="title"></app-header>
+</ion-header>
+
+<ion-content class="no-scroll">
+
+  <ion-grid class="row-item">
+    <div class="item" *ngFor="let kamelote of kamelotes" [routerLink]="['/kamelote', kamelote.id]">
+      <img class="img-item" [src]="'assets/img/kamelotes/'+ kamelote.img[0] + '.jpg'" alt="brocantes">
+      <div class="card-item">
+        <div class="card-name-price">
+          <div class="card-name">{{kamelote.name}}</div>
+          <div class="card-price">{{kamelote.price}} €</div>
+        </div>
+        <div class="card-event">{{getKameloteLocationWithEventId(kamelote.eventFoundId)}}</div>
+        <div class="card-date">{{kamelote.createdAt}}</div>
+      </div>
+    </div>
+  </ion-grid>
+
+</ion-content>

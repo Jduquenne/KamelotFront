@@ -1,0 +1,27 @@
+<ion-content class="ion-padding">
+  <div class="img-container">
+    <div class="back" (click)="back()">< Retour</div>
+    <div class="img-main-container">
+      <img class="img-main" [src]="'assets/img/kamelotes/'+ mainKameloteImg + '.jpg'" alt="event">
+      <div class="img-main-shadow"></div>
+    </div>
+    <div class="img-group">
+      <img [class]="mainKameloteImg === imgId ? 'img-item selected' : 'img-item'" *ngFor="let imgId of kamelote.img" [src]="'assets/img/kamelotes/'+ imgId + '.jpg'" alt="event" (click)="switchMainKameloteImg(imgId)">
+    </div>
+    <div class="name-price-container">
+      <div class="name-container">
+        {{kamelote.name}}
+      </div>
+      <div class="price-container">
+        {{kamelote.price}}€
+      </div>
+    </div>
+    <div class="description-container">
+      Cette kamelote a été chinée à l'événement {{getKameloteLocationWithEventId(kamelote.eventFoundId).name}} dans la ville de {{getKameloteLocationWithEventId(kamelote.eventFoundId).adress.town}}.
+    </div>
+    <div class="action-btn-group">
+      <div class="action-btn edit">Editer</div>
+      <div class="action-btn delete">Supprimer</div>
+    </div>
+  </div>
+</ion-content>

@@ -24,3 +24,49 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+* {
+  font-family: Montserrat, sans-serif;
+}
+
+.thin {
+  font-family: "Montserrat Thin", sans-serif;
+}
+
+.medium {
+  font-family: "Montserrat Medium", sans-serif;
+}
+
+.light {
+  font-family: "Montserrat Light", sans-serif;
+}
+
+.bold {
+  font-family: "Montserrat Black", sans-serif;
+}
+
+.extraBold {
+  font-family: "Montserrat ExtraBold", sans-serif;
+}
+
+ion-searchbar {
+  padding: 20px;
+
+  .searchbar-input {
+    border-radius: 5px !important;;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+}
+
+.no-scroll {
+  --offset-bottom: auto!important;
+  --overflow: hidden;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+
+

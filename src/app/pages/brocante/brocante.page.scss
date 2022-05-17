@@ -1,0 +1,139 @@
+.img-container {
+  height: 30vh;
+  width: 100% ;
+  position: relative;
+
+  .back {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    color: #2a9d8f;
+    background-color: var(--ion-color-secondary-contrast);
+    font-size: 13px;
+    font-weight: 800;
+  }
+
+  .heart {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--ion-color-secondary-contrast);
+    background-color: #2a9d8f;
+    font-size: 13px;
+    font-weight: 800;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  height: 30vh;
+  width: 100%;
+  margin-top: 5px;
+
+  .details-name-sellers-container {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .details-name {
+      width: 80%;
+      font-size: 17px;
+      font-weight: 800;
+      line-height: 1;
+      text-transform: capitalize;
+    }
+
+    .details-sellers {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 20%;
+      font-size: 15px;
+      font-weight: 800;
+    }
+  }
+
+  .details-adress-container {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .details-town {
+      width: 100%;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+  }
+
+  .details-date-container {
+    width: 100%;
+    height: 10%;
+    font-size: 13px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-transform: capitalize;
+    margin-bottom: 3px;
+  }
+
+  .details-description-container {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .details-description-label {
+      width: 100%;
+      height: 15%;
+      font-size: 15px;
+      font-weight: 800;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .details-description {
+      width: 100%;
+      height: 75%;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+  }
+}
+
+.map-container {
+  height: 29%;
+  width: 100%;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}

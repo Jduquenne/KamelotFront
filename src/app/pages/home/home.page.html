@@ -1,0 +1,10 @@
+<ion-header>
+  <app-header [title]="title"></app-header>
+</ion-header>
+
+<ion-content class="no-scroll">
+  <div *ngFor="let section of sections" class="slide ion-padding no-scroll">
+    <span class="section-title">{{section.title}}</span>
+    <app-slider [dataList]="brocantes"></app-slider>
+  </div>
+</ion-content>

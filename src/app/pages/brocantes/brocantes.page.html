@@ -1,0 +1,39 @@
+<ion-header>
+  <app-header [title]='title'></app-header>
+</ion-header>
+
+<ion-toolbar>
+  <div class="search-container">
+    <ion-searchbar class="searchbar" placeholder="Recherche..." [(ngModel)]="filterTerm" animated="true"></ion-searchbar>
+  </div>
+</ion-toolbar>
+
+<ion-segment scrollable="true" (ionChange)="getBrocantesWithCategory($event)" [(ngModel)]="sectionDefault">
+  <ion-segment-button *ngFor="let category of categories" value="{{ category }}">
+    {{ category }}
+  </ion-segment-button>
+</ion-segment>
+
+<ion-content class="no-scroll">
+  <div class="tools-container">
+    <div class="results">{{brocantes.length}} résultats</div>
+    <div (click)="resizeFullOnClick()" class="display-btn">{{ gridColumnFullWitdh ? 'half' : 'full'}}</div>
+  </div>
+  <ion-grid class="row-item gtc-half-screen">
+    <div class="item" *ngFor="let brocante of brocantes | filter:filterTerm" [routerLink]="['/brocante', brocante.id]">
+      <div class="date-container">
+        <div class="date">{{brocante.date.day}}/{{brocante.date.month}}</div>
+      </div>
+      <img class="img-item" [src]="'assets/img/brocantes/'+ brocante.img + '.jpg'" alt="brocantes">
+      <div class="card-item">
+        <div class="item-type">{{brocante.sellers.type}}</div>
+        <div class="item-name">{{brocante.name}}</div>
+        <div class="item-town-seller">
+          <div class="item-town">{{brocante.adress.town}}</div>
+          <div class="item-sellers">{{brocante.sellers.count}}</div>
+        </div>
+      </div>
+    </div>
+  </ion-grid>
+
+</ion-content>

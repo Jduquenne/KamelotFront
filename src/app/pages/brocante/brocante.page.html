@@ -1,0 +1,30 @@
+<ion-header>
+  <app-header></app-header>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="img-container">
+    <div class="back" (click)="back()">< Retour</div>
+    <div class="heart">Heart</div>
+    <img [src]="'assets/img/brocantes/'+ brocante.img + '.jpg'" alt="event">
+  </div>
+  <div class="details-container">
+    <div class="details-name-sellers-container">
+      <div class="details-name">{{brocante.name}}</div>
+      <div class="details-sellers">{{brocante.sellers.count}}</div>
+    </div>
+    <div class="details-adress-container">
+      <div class="details-town">{{brocante.adress.zipCode}} - {{brocante.adress.town}} - {{brocante.adress.state}}</div>
+    </div>
+    <div class="details-date-container">
+      {{brocante.date.day + ' ' + toMonthName(brocante.date.month) + ' ' + brocante.date.year}} - {{brocante.date.timeStarted.hour}}:{{brocante.date.timeStarted.minute}} à {{brocante.date.timeEnd.hour}}:{{brocante.date.timeEnd.minute}}
+    </div>
+    <div class="details-description-container">
+      <div class="details-description-label">Description</div>
+      <div class="details-description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</div>
+    </div>
+  </div>
+  <div class="map-container">
+    <img src="assets/img/brocantes/google-maps.png" alt="event">
+  </div>
+</ion-content>

@@ -1,0 +1,11 @@
+<ion-tabs class="tabs">
+  <div class="tab-container">
+    <ion-tab-bar class="tab-bar" >
+      <ion-tab-button class="tab" [tab]="t.tab" *ngFor="let t of tabPages; let i = index">
+        <ion-label>{{t.title}}</ion-label>
+        <ion-icon [name]="t.icon"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </div>
+</ion-tabs>
+
